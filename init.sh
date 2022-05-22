@@ -55,7 +55,7 @@ copy_certs () {
 	name=$1
 	mkdir -p /etc/zabbix/certs/
 	cp ca/root-ca.crt certs/$name.key certs/$name.crt /etc/zabbix/certs/
-	cat ca/signing-ca.crt >> /etc/zabbix/certs/$name.key
+	cat ca/signing-ca.crt >> /etc/zabbix/certs/$name.crt
 	chown -R zabbix:zabbix /etc/zabbix/certs/ && chmod -R 500 /etc/zabbix/certs/
 }
 
